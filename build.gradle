@@ -19,6 +19,7 @@ buildscript {
         liveDataVersion = "2.2.0"
         loggingInterceptorVersion = "4.7.2"
         liveEventVersion = "1.2.0"
+        roomVersion = "2.2.5"
 
         libs = [
                 kotlin             : "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
@@ -45,7 +46,11 @@ buildscript {
                 lifecycleProcess   : "androidx.lifecycle:lifecycle-process:$lifecycleVersion",
                 liveData           : "androidx.lifecycle:lifecycle-livedata-ktx:$liveDataVersion",
                 loggingInterceptor : "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion",
-                liveEvent          : "com.github.hadilq.liveevent:liveevent:$liveEventVersion"
+                liveEvent          : "com.github.hadilq.liveevent:liveevent:$liveEventVersion",
+                roomRuntime        : "androidx.room:room-runtime:$roomVersion",
+                roomCompiler       : "androidx.room:room-compiler:$roomVersion",
+                roomCoroutines     : "androidx.room:room-ktx:$roomVersion"
+
         ]
     }
 
