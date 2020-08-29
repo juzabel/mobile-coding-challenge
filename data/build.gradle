@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -39,7 +40,7 @@ dependencies {
     implementation libs.moshiKotlin
     implementation libs.loggingInterceptor
     implementation libs.roomRuntime
-    implementation libs.roomCompiler
+    kapt libs.roomCompiler
     implementation libs.roomCoroutines
 
 
