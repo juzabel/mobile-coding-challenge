@@ -45,7 +45,7 @@ internal object Server {
     private fun readFile(context: Context, uri: String?): String {
         var json: String? = null
         try {
-            val inputStream = context.assets.open("api/json/$uri.json")
+            val inputStream = context.assets.open("$uri.json")
             json = inputStream.bufferedReader().use{it.readText()}
         } catch (ex: Exception) {
             ex.printStackTrace()

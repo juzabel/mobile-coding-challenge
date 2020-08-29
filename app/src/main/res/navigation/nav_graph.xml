@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/postureListFragment"
+    android:id="@+id/nav_graph">
+    <fragment
+        android:id="@+id/postureListFragment"
+        android:name="net.juzabel.yogasolotest.posturelist.PostureListFragment"
+        android:label="@string/posture_list"
+        tools:layout="@layout/posture_list_fragment"/>
+</navigation>
