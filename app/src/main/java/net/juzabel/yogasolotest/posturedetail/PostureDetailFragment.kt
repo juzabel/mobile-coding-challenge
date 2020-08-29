@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import coil.load
+import kotlinx.android.synthetic.main.posture_detail_fragment.*
 import net.juzabel.domain.core.Error
+import net.juzabel.domain.feature.posturedetail.model.PostureDetail
 import net.juzabel.yogasolotest.R
 import net.juzabel.yogasolotest.util.observe
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -36,11 +39,21 @@ class PostureDetailFragment : Fragment() {
 
     private fun subscribeData() {
         observe(viewModel.postureDetail) {
-
+            setUi(it)
         }
 
         observe(viewModel.error) {
             Toast.makeText(context, (it as Error.GenericError).message, Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun setUi(postureDetail: PostureDetail?) {
+        postureDetail?.let { detail ->
+            postureDetailImage.load(detail.picture)
+            postureDetailTitle.text = detail.name
+            postureDetailTeacherValue.text = detail.teacher
+            postureDetaildurationValue.text = detail.duration
+            postureDetailDescription.text = detail.description
         }
     }
 
