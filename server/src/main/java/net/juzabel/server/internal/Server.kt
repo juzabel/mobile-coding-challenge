@@ -16,7 +16,7 @@ import io.ktor.server.engine.ApplicationEngine
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
-class Server {
+internal object Server {
     private var server: ApplicationEngine? = null
     fun init(context: Context) {
         Log.d(Server::class.qualifiedName, "embeded server init")
@@ -54,9 +54,8 @@ class Server {
         return json
     }
 
-    companion object {
         private const val PORT = 8080
         private const val GRACE_PERIOD = 100L
         private const val TIMEOUT = 100L
-    }
+
 }
