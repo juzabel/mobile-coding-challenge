@@ -8,5 +8,5 @@ interface Api {
     suspend fun getPostureList() : Response<List<PostureRemoteModel>>
 
     @GET("posture_detail")
-    suspend fun getPostureDetail() : Response<PostureRemoteModel>
+    suspend fun getPostureDetail() : Response<List<PostureDetailRemoteModel>>
 }
