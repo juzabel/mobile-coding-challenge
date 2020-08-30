@@ -9,4 +9,7 @@
     <dimen name="posture_detail_padding">16dp</dimen>
     <dimen name="posture_detail_item_margin">10dp</dimen>
 
+    <dimen name="font_text_medium_size">18sp</dimen>
+    <dimen name="font_text_big_size">24sp</dimen>
+
 </resources>

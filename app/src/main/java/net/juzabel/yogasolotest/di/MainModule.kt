@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.navigation.NavController
 import net.juzabel.domain.di.DomainModule
 import net.juzabel.yogasolotest.core.Navigator
-import net.juzabel.yogasolotest.posturedetail.PostureDetailViewModel
-import net.juzabel.yogasolotest.posturelist.PostureListViewModel
+import net.juzabel.yogasolotest.feature.posturedetail.PostureDetailViewModel
+import net.juzabel.yogasolotest.feature.posturelist.PostureListViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
 import org.koin.dsl.module

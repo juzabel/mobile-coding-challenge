@@ -21,6 +21,7 @@ buildscript {
         coilVersion = "0.12.0"
         liveEventVersion = "1.2.0"
         roomVersion = "2.2.5"
+        mockkVersion = "1.10.0"
 
         libs = [
                 kotlin             : "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
@@ -31,8 +32,6 @@ buildscript {
                 appCompat          : "androidx.appcompat:appcompat:$appCompatVersion",
                 constraintLayout   : "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion",
                 jUnit              : "junit:junit:$jUnitVersion",
-                jUnitAndroid       : "androidx.test.ext:junit:$jUnitAndroidVersion",
-                espressoCore       : "androidx.test.espresso:espresso-core:$espressoVersion",
                 kTor               : "io.ktor:ktor:$ktorVersion",
                 kTorServer         : "io.ktor:ktor-server-netty:$ktorVersion",
                 kTorGson           : "io.ktor:ktor-gson:$ktorVersion",
@@ -44,14 +43,14 @@ buildscript {
                 navigationUi       : "androidx.navigation:navigation-ui-ktx:$navigationVersion",
                 lifecycleExtensions: "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion",
                 lifecycleViewmodel : "androidx.lifecycle:lifecycle-viewmodel:$lifecycleVersion",
-                lifecycleProcess   : "androidx.lifecycle:lifecycle-process:$lifecycleVersion",
                 liveData           : "androidx.lifecycle:lifecycle-livedata-ktx:$liveDataVersion",
                 loggingInterceptor : "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion",
                 liveEvent          : "com.github.hadilq.liveevent:liveevent:$liveEventVersion",
                 roomRuntime        : "androidx.room:room-runtime:$roomVersion",
                 roomCompiler       : "androidx.room:room-compiler:$roomVersion",
                 roomCoroutines     : "androidx.room:room-ktx:$roomVersion",
-                coil               : "io.coil-kt:coil:$coilVersion"
+                coil               : "io.coil-kt:coil:$coilVersion",
+                mockk              : "io.mockk:mockk:$mockkVersion"
 
         ]
     }

@@ -4,7 +4,6 @@ import android.content.Context
 import android.os.Bundle
 import androidx.navigation.NavController
 import net.juzabel.yogasolotest.R
-import net.juzabel.yogasolotest.posturedetail.PostureDetailFragment
 
 class Navigator(private val context: Context, private val navController: NavController) {
 
