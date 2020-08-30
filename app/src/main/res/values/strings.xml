@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">YogaSoloTest</string>
+    <string name="posture_list">Posture List</string>
+    <string name="posture_detail">Posture Detail</string>
+
+    <string name="posture_detail_teacher">Teacher</string>
+    <string name="posture_detail_duration">Duration</string>
+
+    <!-- Nav Component arguments -->
+    <string name="posture_id">id</string>
+</resources>

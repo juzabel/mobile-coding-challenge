@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/postureListFragment"
+    android:id="@+id/nav_graph">
+    <fragment
+        android:id="@+id/postureListFragment"
+        android:name="net.juzabel.yogasolotest.feature.posturelist.PostureListFragment"
+        android:label="@string/posture_list"
+        tools:layout="@layout/posture_list_fragment">
+
+        <action
+            android:id="@+id/action_navigate_to_detail"
+            app:destination="@id/postureDetailFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/postureDetailFragment"
+        android:name="net.juzabel.yogasolotest.feature.posturedetail.PostureDetailFragment"
+        android:label="@string/posture_id"
+        tools:layout="@layout/posture_detail_fragment">
+        <argument
+            android:name="@string/posture_id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_back"
+            app:destination="@id/postureListFragment"
+            app:popUpTo="@id/postureListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

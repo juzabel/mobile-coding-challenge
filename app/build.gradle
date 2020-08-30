@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "net.juzabel.yogasolotest"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/*'
+    }
+}
+
+dependencies {
+    implementation project (':server')
+    implementation project(':data')
+    implementation project(':domain')
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation libs.kotlin
+    implementation libs.koinViewmodel
+    implementation libs.coreKtx
+    implementation libs.appCompat
+    implementation libs.constraintLayout
+    implementation libs.koin
+    implementation libs.navigationFragment
+    implementation libs.navigationUi
+    implementation libs.coil
+    implementation libs.liveEvent
+    implementation libs.lifecycleExtensions
+    implementation libs.lifecycleViewmodel
+
+    testImplementation libs.jUnit
+}

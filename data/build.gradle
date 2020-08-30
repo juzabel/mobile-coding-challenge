@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            buildConfigField 'String', 'BASE_URL', '"http://localhost:8080/api/"'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField 'String', 'BASE_URL', '"http://localhost:8080/api/"'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(path: ':domain')
+    implementation libs.koin
+    implementation libs.retrofit
+    implementation libs.retrofitMoshi
+    implementation libs.moshi
+    implementation libs.moshiKotlin
+    implementation libs.loggingInterceptor
+    implementation libs.roomRuntime
+    kapt libs.roomCompiler
+    implementation libs.roomCoroutines
+
+    implementation libs.kotlin
+    implementation libs.coreKtx
+    implementation libs.appCompat
+    testImplementation libs.jUnit
+    testImplementation libs.mockk
+    testImplementation libs.coroutinesTest
+}
