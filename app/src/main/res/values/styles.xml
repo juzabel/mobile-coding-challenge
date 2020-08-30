@@ -7,4 +7,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.Text">
+        <item name="android:textSize">@dimen/font_text_medium_size</item>
+    </style>
+
+    <style name="AppTheme.TextSubtitle" parent="AppTheme.Text">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme.TextTitle" parent="AppTheme.TextSubtitle">
+        <item name="android:textSize">@dimen/font_text_big_size</item>
+    </style>
 </resources>

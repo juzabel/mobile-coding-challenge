@@ -1,4 +1,4 @@
-package net.juzabel.yogasolotest.posturelist
+package net.juzabel.yogasolotest.feature.posturelist
 
 import android.view.LayoutInflater
 import android.view.View

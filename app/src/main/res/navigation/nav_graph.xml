@@ -6,7 +6,7 @@
     android:id="@+id/nav_graph">
     <fragment
         android:id="@+id/postureListFragment"
-        android:name="net.juzabel.yogasolotest.posturelist.PostureListFragment"
+        android:name="net.juzabel.yogasolotest.feature.posturelist.PostureListFragment"
         android:label="@string/posture_list"
         tools:layout="@layout/posture_list_fragment">
 
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/postureDetailFragment"
-        android:name="net.juzabel.yogasolotest.posturedetail.PostureDetailFragment"
+        android:name="net.juzabel.yogasolotest.feature.posturedetail.PostureDetailFragment"
         android:label="@string/posture_id"
         tools:layout="@layout/posture_detail_fragment">
         <argument

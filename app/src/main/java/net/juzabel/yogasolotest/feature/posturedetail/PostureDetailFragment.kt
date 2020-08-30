@@ -1,4 +1,4 @@
-package net.juzabel.yogasolotest.posturedetail
+package net.juzabel.yogasolotest.feature.posturedetail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -34,6 +34,7 @@ class PostureDetailFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        postureDetailProgressBar.show()
         subscribeData()
     }
 
@@ -55,6 +56,7 @@ class PostureDetailFragment : Fragment() {
             postureDetaildurationValue.text = detail.duration
             postureDetailDescription.text = detail.description
         }
+        postureDetailProgressBar.hide()
     }
 
     companion object {

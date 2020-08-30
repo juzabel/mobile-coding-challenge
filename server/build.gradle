@@ -29,7 +29,6 @@ dependencies {
     implementation libs.coreKtx
     implementation libs.appCompat
     testImplementation libs.jUnit
-    androidTestImplementation libs.jUnitAndroid
 
     //Self hosted web service
     implementation libs.kTor

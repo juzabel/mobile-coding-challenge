@@ -48,4 +48,5 @@ dependencies {
     implementation libs.coreKtx
     implementation libs.appCompat
     testImplementation libs.jUnit
+    testImplementation libs.mockk
 }

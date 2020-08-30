@@ -48,9 +48,8 @@ dependencies {
     implementation libs.navigationUi
     implementation libs.coil
     implementation libs.liveEvent
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
+    implementation libs.lifecycleExtensions
+    implementation libs.lifecycleViewmodel
 
     testImplementation libs.jUnit
 }

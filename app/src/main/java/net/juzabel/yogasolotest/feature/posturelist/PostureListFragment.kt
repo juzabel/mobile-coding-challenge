@@ -1,4 +1,4 @@
-package net.juzabel.yogasolotest.posturelist
+package net.juzabel.yogasolotest.feature.posturelist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,15 +10,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.posture_list_fragment.*
 import net.juzabel.domain.core.Error
-import net.juzabel.domain.di.DomainModule
 import net.juzabel.yogasolotest.R
 import net.juzabel.yogasolotest.core.Navigator
 import net.juzabel.yogasolotest.util.observe
-import org.koin.android.ext.android.get
 import org.koin.android.ext.android.inject
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
-import org.koin.core.qualifier.named
 
 
 class PostureListFragment : Fragment() {
@@ -48,6 +45,7 @@ class PostureListFragment : Fragment() {
     }
 
     private fun setUi() {
+        fragmentPostureListProgressBar.show()
         postureListAdapter = PostureListAdapter() {
             navigator.moveToPostureDetail(it)
         }
@@ -64,6 +62,7 @@ class PostureListFragment : Fragment() {
         observe(viewModel.listPostures) {list ->
             postureListAdapter.list = list
             postureListAdapter.notifyDataSetChanged()
+           fragmentPostureListProgressBar.hide()
         }
         observe(viewModel.error) {
             Toast.makeText(context, (it as Error.GenericError).message, Toast.LENGTH_LONG).show()

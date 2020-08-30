@@ -3,11 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".posturelist.PostureListFragment">
+    tools:context=".feature.posturelist.PostureListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragmentPostureListRecyclerView"
         android:layout_height="match_parent"
         android:layout_width="match_parent"/>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_gravity="center"
+        android:id="@+id/fragmentPostureListProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </FrameLayout>
