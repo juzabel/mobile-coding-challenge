@@ -7,6 +7,7 @@ import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import net.juzabel.data.BuildConfig
 import net.juzabel.data.local.PostureDatabase
 import net.juzabel.data.remote.Api
+import net.juzabel.domain.feature.posturelist.model.Posture
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -20,6 +21,8 @@ val dataModule = module {
     single { provideRetrofit(get(), get()) }
     single { createMoshiConverter() }
     single { provideDatabase(androidContext())}
+    single { get<PostureDatabase>().postureDao()}
+    single { get<PostureDatabase>().postureDetailDao()}
 }
 
     //Remote

@@ -1,4 +1,17 @@
 package net.juzabel.yogasolotest.core
 
-class Navigator {
+import android.content.Context
+import android.os.Bundle
+import androidx.navigation.NavController
+import net.juzabel.yogasolotest.R
+import net.juzabel.yogasolotest.posturedetail.PostureDetailFragment
+
+class Navigator(private val context: Context, private val navController: NavController) {
+
+    fun moveToPostureDetail(id: String){
+        val args = Bundle()
+        args.putString(context.getString(R.string.posture_id), id)
+
+        navController.navigate(R.id.action_navigate_to_detail, args)
+    }
 }

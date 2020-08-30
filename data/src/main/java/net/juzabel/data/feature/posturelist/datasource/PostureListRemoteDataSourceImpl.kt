@@ -8,12 +8,12 @@ import net.juzabel.domain.feature.posturelist.model.Posture
 
 class PostureListRemoteDataSourceImpl(private val api: Api) : PostureListRemoteDataSource {
     override suspend fun getPostureList(): Result<List<Posture>> {
-       val res =  api.getPostureList()
-        return if(res.isSuccessful){
-            val mapRes = res.body()?.mapToDomain() ?: emptyList()
+       val response =  api.getPostureList()
+        return if(response.isSuccessful){
+            val mapRes = response.body()?.mapToDomain() ?: emptyList()
             Result.Ok(mapRes)
         }else {
-            Result.Err(Error.GenericError("Something went wrong"))
+            Result.Err(Error.GenericError("Something went wrong: Error ${response.code()}"))
         }
     }
 }
