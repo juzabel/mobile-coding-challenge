@@ -43,10 +43,10 @@ dependencies {
     kapt libs.roomCompiler
     implementation libs.roomCoroutines
 
-
     implementation libs.kotlin
     implementation libs.coreKtx
     implementation libs.appCompat
     testImplementation libs.jUnit
     testImplementation libs.mockk
+    testImplementation libs.coroutinesTest
 }

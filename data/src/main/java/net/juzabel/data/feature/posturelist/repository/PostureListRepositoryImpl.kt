@@ -13,8 +13,8 @@ class PostureListRepositoryImpl(
     private val postureListRemoteDataSource: PostureListRemoteDataSource
 ) : PostureListRepository {
     override suspend fun getPostureList(): Result<List<Posture>> {
-        val localValues = postureListLocalDataSource.getPostureList()
         return try {
+            val localValues = postureListLocalDataSource.getPostureList()
             if (localValues.isNotEmpty()) {
                 Result.Ok(localValues)
             } else {
